@@ -24,7 +24,7 @@
 The episode docs link to the underlying evidence (screenshots, voice notes, videos) using paths like `../<folder>/<file>`. Most of that evidence is included directly in this repository, so the links resolve once you have the repo.
 
 Some material is intentionally not committed here:
-- Files over GitHub's 100MB per-file limit (large videos and archives), bundled locally as `oversized_evidence.zip`.
+- Files over GitHub's 100MB per-file limit (large videos and archives), bundled locally as [`oversized_evidence.zip`](https://pixeldrain.com/u/xzNrSERP) (Pixeldrain mirror).
 - Material involving claimed minors, which is excluded entirely.
 - Machine-generated transcripts and OCR dumps.
 
