@@ -1,0 +1,31 @@
+# Policy: PRIVATE repo. Track the evidence + the LLM-written summary docs.
+# Keep local-only: the .env secret, oversized media, generated/derived artifacts,
+# and the folders involving claimed minors.
+
+# --- Secret ---
+.env
+
+# --- Oversized evidence ---
+# Files >100MB exceed GitHub's hard per-file limit. They are bundled into
+# oversized_evidence.zip (kept local) by _bundle.py. The zip itself is too big to push.
+oversized_evidence.zip
+
+# --- Scratch scripts, extracted-archive mirror, generated indexes ---
+# Everything underscore-prefixed at the repo root is local tooling/output:
+#   _scan*.py, _apply_renames.py, _update_refs.py, _bundle.py (scratch scripts)
+#   _unpacked/ (extraction of the archive zips - duplicates source, regenerable)
+#   _fileindex.txt, _transcribe_work/ (generated)
+/_*
+
+# --- Derived / regenerable artifacts ---
+# Whisper transcripts and OCR dumps are machine-generated from the source media
+# (via transcribe.py / make_transcripts.py). Kept local to avoid re-coupling the
+# repo to a fragile path-encoded reference graph.
+/transcripts/
+/ocr_dump_original.txt
+/ocr_dump_unpacked.txt
+/TRANSCRIPTS.md
+
+# --- Sensitive: claimed minors stay local, never committed ---
+/Pedo claims involving supposed 16yo/
+/Myzzl claims to be 18 and age baiting adults and cuddling a 15yo and 20yo. claims to be 14 after confrontation. 20yo makes sexual comments to 15yo/
